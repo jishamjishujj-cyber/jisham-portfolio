@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jisham | Portfolio</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#080b10;color:#f5f7fa;font-family:Arial,sans-serif;line-height:1.7}
+:root{--green:#48ffad;--card:#121923;--muted:#a0acbb}
+nav{padding:18px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ffffff18;background:#080b10}
+.logo{font-size:22px;font-weight:bold}
+.logo span{color:var(--green)}
+nav a{color:#d0d7e2;text-decoration:none;font-size:12px;margin-left:10px}
+</style>
+<style>
+.hero{min-height:75vh;display:flex;align-items:center;justify-content:center;gap:40px;padding:50px 7%;flex-wrap:wrap}
+.intro{max-width:480px}
+.tag,.label{color:var(--green);letter-spacing:3px;font-size:12px}
+h1{font-size:clamp(45px,8vw,72px);line-height:1.1;margin:18px 0}
+h1 span{color:var(--green)}
+p{color:var(--muted)}
+.photo{padding:7px;border:2px solid var(--green);border-radius:24px}
+.photo img{width:210px;height:270px;object-fit:cover;display:block;border-radius:17px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{display:inline-block;padding:12px 17px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:13px}
+.primary{background:var(--green);color:#07110c}
+.secondary{border:1px solid #566171;color:white}
+section{padding:50px 8%;scroll-margin-top:20px}
+h2{font-size:30px;margin:8px 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin-top:22px}
+.card{padding:22px;background:var(--card);border:1px solid #ffffff15;border-radius:14px}
+.card h3{margin-bottom:8px}
+.card p{font-size:14px}
+.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.skills span{padding:8px 13px;background:var(--card);border:1px solid #ffffff20;border-radius:30px;font-size:13px}
+.contact{text-align:center;background:#0d1916}
+footer{text-align:center;padding:24px;color:#8591a1;border-top:1px solid #ffffff15;font-size:13px}
+@media(max-width:600px){
+nav{padding:15px 4%}
+nav a{font-size:10px;margin-left:6px}
+.hero{padding:40px 6%;gap:25px;text-align:center}
+.photo img{width:175px;height:225px}
+.buttons{justify-content:center}
+section{padding:40px 6%}
+}
+</style>
+
+<style>
+/* PREMIUM DESIGN */
+body {
+  background: radial-gradient(ellipse at 75% 5%, #12271f 0%, #080b10 48%);
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(14px);
+  background: #080b10eF;
+}
+nav a { transition: color .25s ease; }
+nav a:hover { color: var(--green); }
+.hero { min-height: 80vh; }
+.intro { animation: fadeUp .8s ease both; }
+.photo {
+  box-shadow: 0 0 35px #48ffad20;
+  transition: transform .3s ease, box-shadow .3s ease;
+  animation: fadeUp 1s ease both;
+}
+.photo:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 0 45px #48ffad45;
+}
+section { max-width: 1150px; margin: auto; }
+h2 { font-size: clamp(30px, 5vw, 42px); }
+.card {
+  transition: transform .25s ease, border-color .25s ease;
+  background: linear-gradient(145deg, #151f2b, #0d131b);
+}
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #48ffad80;
+}
+.card h3 { color: var(--green); }
+.skills span {
+  transition: transform .2s ease, border-color .2s ease;
+}
+.skills span:hover {
+  transform: translateY(-3px);
+  border-color: #48ffad80;
+}
+.btn { transition: transform .2s ease, box-shadow .2s ease; }
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 22px #48ffad25;
+}
+.primary { box-shadow: 0 0 18px #48ffad18; }
+.secondary { border-color: #48ffad75; }
+.contact { border-radius: 22px; margin-bottom: 35px; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media(max-width:600px) {
+  .hero { min-height: auto; padding-top: 50px; padding-bottom: 55px; }
+  .photo { margin-top: 5px; }
+  .contact { margin-left: 12px; margin-right: 12px; }
+}
+@media(prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+</style>
+
+
+<style>
+/* PROJECT CARDS UPGRADE */
+.project-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.project-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #48ffad12;
+  border: 1px solid #48ffad30;
+  font-size: 24px;
+}
+.status {
+  color: #48ffad;
+  border: 1px solid #48ffad50;
+  background: #48ffad0d;
+  border-radius: 30px;
+  padding: 5px 9px;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+.status.learning {
+  color: #b8c5d5;
+  border-color: #ffffff25;
+  background: #ffffff08;
+}
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 18px;
+}
+.project-tags span {
+  font-size: 11px;
+  color: #b6c4d2;
+  background: #ffffff08;
+  border: 1px solid #ffffff12;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+#projects .card { min-height: 230px; }
+</style>
+\n
+<style id="premium-motion-upgrade">
+/* Premium animation upgrade */
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .card, .btn, nav a, .skills span {
+    transition: transform .25s ease, box-shadow .25s ease,
+                border-color .25s ease, background .25s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px #00000035;
+    border-color: #66e0bd70;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+
+  nav a:hover, .skills span:hover {
+    transform: translateY(-2px);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .65s ease, transform .65s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+\n
+<style id="animated-skill-bars">
+.skill-bars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin: 28px 0;
+}
+.skill-item { min-width: 0; }
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 9px;
+  font-size: 14px;
+}
+.skill-info span:last-child {
+  color: #66e0bd;
+  font-variant-numeric: tabular-nums;
+}
+.skill-track {
+  height: 9px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #ffffff18;
+}
+.skill-fill {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #35c99a, #8af0cf);
+  transition: width 1.2s ease;
+}
+#skills.reveal.visible .skill-fill {
+  width: var(--level);
+}
+@media (prefers-reduced-motion: reduce) {
+  .skill-fill { transition: none; }
+}
+</style>
+\n</head>
+<body>
+<nav>
+<div class="logo">JISHAM<span>.</span></div>
+<div><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a></div>
+</nav>
+<header class="hero">
+<div class="intro">
+<div class="tag">WELCOME TO MY PORTFOLIO</div>
+<h1>Hi, I'm<br><span>Jisham.</span></h1>
+<p>Technology enthusiast learning web development, Python and cybersecurity. Building my skills one project at a time.</p>
+<div class="buttons">
+<a class="btn primary" href="#" onclick="return unlockResume()">↓ Download Resume</a>
+<a class="btn secondary" href="#contact">Contact Me ↗</a>
+</div>
+</div>
+<div class="photo"><img src="profile.png" alt="Jisham"></div>
+</header>
+<section id="about">
+<div class="label">01 / ABOUT ME</div>
+<h2>A little about me.</h2>
+<p>I enjoy learning technology, exploring new tools and building useful digital projects. My goal is to improve my technical skills every day.</p>
+</section>
+<section id="skills">
+<div class="label">02 / MY SKILLS</div>
+<h2>What I'm learning.</h2>
+<p>Building my technical knowledge one step at a time.</p>
+<div class="skill-bars">
+  <div class="skill-item">
+    <div class="skill-info"><span>HTML & CSS</span><span>70%</span></div>
+    <div class="skill-track"><div class="skill-fill" style="--level:70%"></div></div>
+  </div>
+  <div class="skill-item">
+    <div class="skill-info"><span>Python</span><span>35%</span></div>
+    <div class="skill-track"><div class="skill-fill" style="--level:35%"></div></div>
+  </div>
+  <div class="skill-item">
+    <div class="skill-info"><span>iSH Shell</span><span>45%</span></div>
+    <div class="skill-track"><div class="skill-fill" style="--level:45%"></div></div>
+  </div>
+  <div class="skill-item">
+    <div class="skill-info"><span>Cybersecurity</span><span>20%</span></div>
+    <div class="skill-track"><div class="skill-fill" style="--level:20%"></div></div>
+  </div>
+  <div class="skill-item">
+    <div class="skill-info"><span>Web Development</span><span>50%</span></div>
+    <div class="skill-track"><div class="skill-fill" style="--level:50%"></div></div>
+  </div>
+</div>
+<div class="skills">
+<span>HTML & CSS</span><span>Python</span><span>iSH Shell</span><span>Cybersecurity</span><span>Web Development</span>
+</div>
+</section>
+<section id="projects">
+<div class="label">03 / PROJECTS</div>
+<h2>What I'm building.</h2>
+<div class="grid">
+<div class="card">
+<div class="project-top"><span class="project-icon">🌐</span><span class="status">LIVE LOCALLY</span></div>
+<h3>Personal Portfolio</h3>
+<p>A responsive personal website showcasing my profile, skills and resume.</p>
+<div class="project-tags"><span>HTML</span><span>CSS</span><span>Responsive</span></div>
+</div>
+<div class="card">
+<div class="project-top"><span class="project-icon">🐍</span><span class="status learning">LEARNING</span></div>
+<h3>Python Practice</h3>
+<p>Practising Python fundamentals and building small programming projects.</p>
+<div class="project-tags"><span>Python</span><span>Programming</span></div>
+</div>
+<div class="card">
+<div class="project-top"><span class="project-icon">🛡️</span><span class="status learning">LEARNING</span></div>
+<h3>Cybersecurity Lab</h3>
+<p>Learning security fundamentals and practising in authorized environments.</p>
+<div class="project-tags"><span>Security</span><span>Networking</span></div>
+</div>
+</div>
+</section>
+<section id="contact" class="contact">
+<div class="label">04 / CONTACT</div>
+<h2>Let's connect.</h2>
+<p>Interested in connecting or discussing a project?</p>
+<div class="buttons" style="justify-content:center">
+<a class="btn primary" href="mailto:jishamjishu.jj@gmail.com">Email Me ↗</a>
+<a class="btn secondary" href="#" onclick="return unlockResume()">Get My Resume</a>
+</div>
+</section>
+<footer>© 2026 Jisham | Personal Portfolio</footer>
+
+<script>
+function unlockResume() {
+    const password = prompt("Enter password to access my resume:");
+    if (password === null) return false;
+
+    if (password === "Jisham@123") {
+        window.open("resume.pdf", "_blank");
+    } else {
+        alert("Incorrect password. Please try again.");
+    }
+    return false;
+}
+</script>
+\n
+<script id="premium-motion-script">
+(function () {
+  const items = document.querySelectorAll(
+    'section, .hero .label, .hero h1, .hero p, .hero .buttons, .card'
+  );
+
+  if (!('IntersectionObserver' in window) ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  items.forEach(function (item) {
+    item.classList.add('reveal');
+  });
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  items.forEach(function (item) {
+    observer.observe(item);
+  });
+})();
+</script>
+\n</body>
+</html>
