@@ -1,1 +1,8 @@
-resume.pdf
+.ash_history
+.gitconfig
+index-*.html
+resume*.pdf
+ports.txt
+report.txt
+scan-results.txt
+server.log
